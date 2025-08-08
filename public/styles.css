@@ -1,0 +1,55 @@
+:root {
+  --bg: #0e0f12;
+  --panel: #17181d;
+  --text: #eaeaf0;
+  --muted: #b8b8c2;
+  --accent: #7aa2f7;
+  --border: #2a2c34;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+.app {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  height: 100vh;
+}
+.sidebar {
+  border-right: 1px solid var(--border);
+  padding: 16px;
+  background: var(--panel);
+  overflow: auto;
+}
+.sidebar h1 { margin-top: 0; }
+.state div { margin: 8px 0; }
+ul { margin: 8px 0 16px; padding-left: 18px; }
+.save-load { margin: 16px 0; display: grid; gap: 8px; }
+.new-game input, .new-game textarea {
+  width: 100%; margin: 6px 0; padding: 8px; background: #111218; border: 1px solid var(--border); color: var(--text);
+}
+.new-game button, #exportBtn {
+  padding: 8px 10px; background: var(--accent); color: #051226; border: none; cursor: pointer; border-radius: 6px;
+}
+.main { display: flex; flex-direction: column; height: 100vh; }
+.log {
+  flex: 1; padding: 20px; overflow: auto;
+}
+.msg {
+  max-width: 800px; padding: 12px 16px; border: 1px solid var(--border); border-radius: 10px; margin: 8px 0;
+}
+.msg.user { background: #101218; }
+.msg.dm { background: #121522; border-color: #2b2e3b; }
+.action {
+  border-top: 1px solid var(--border); padding: 12px; display: flex; gap: 8px;
+}
+.action input {
+  flex: 1; padding: 12px; background: #101218; border: 1px solid var(--border); color: var(--text); border-radius: 8px;
+}
+.action button {
+  padding: 0 16px; background: var(--accent); color: #051226; border: none; border-radius: 8px; cursor: pointer;
+}

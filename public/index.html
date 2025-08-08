@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AI Dungeon Master (Local)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h1>AI Dungeon Master</h1>
+      <div class="state">
+        <div><strong>Location:</strong> <span id="loc">—</span></div>
+        <div><strong>HP:</strong> <span id="hp">—</span></div>
+        <div><strong>Inventory:</strong> <ul id="inventory"></ul></div>
+        <div><strong>Quests:</strong> <ul id="quests"></ul></div>
+      </div>
+
+      <div class="save-load">
+        <button id="exportBtn">Export Save</button>
+        <input type="file" id="importFile" accept="application/json" />
+      </div>
+
+      <div class="new-game">
+        <h2>New Game</h2>
+        <input id="name" placeholder="Name" />
+        <input id="className" placeholder="Class (e.g., Ranger)" />
+        <textarea id="backstory" placeholder="Backstory (optional)"></textarea>
+        <button id="startBtn">Start Adventure</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div id="log" class="log"></div>
+      <form id="actionForm" class="action">
+        <input id="actionInput" placeholder="What do you do?" autocomplete="off" />
+        <button>Act</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>
